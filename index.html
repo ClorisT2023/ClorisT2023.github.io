@@ -188,11 +188,13 @@
         <button class="bttn" onclick="show_feed()">RESULT</button>
     </div>
     
-    <div id="div_end1">
+    <div id="div_m_end">
         <br /><br /><br />
-        <div style="text-align: center;font-variant: small-caps;">Please click to move on.</div>
+        <span id='finished_id' style='padding: 1em;'>
+            Please click to move on.
+        </span>
         <br /><br /><br />
-        <button onclick="dl_as_file('data_eng.txt', full_data);">Download&nbsp;as&nbsp;file</button>
+        <button class="bttn" onclick="dl_as_file('data_eng.txt', full_data)">MOVE ON</button>
     </div>
     
     <div class="texts" id="div_feed">
