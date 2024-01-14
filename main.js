@@ -65,13 +65,16 @@ function lexclick(lexrespd) {
             corr_nonword++;
         }
     }
+
+    var inputNumber = document.getElementById("inputField").value;
     full_data += [
-        lexstim_item.word,
-        bool_dict[lexstim_item.wstatus],
-        bool_dict[lexstim_item.dummy],
-        lexstim_item.response,
-        corrresp,
-        lexstim_item.response_time
+    inputNumber, // Add the input number as the first value
+    lexstim_item.word,
+    bool_dict[lexstim_item.wstatus],
+    bool_dict[lexstim_item.dummy],
+    lexstim_item.response,
+    corrresp,
+    lexstim_item.response_time
     ].join('\t') + '\n';
 
     document.activeElement.blur();
