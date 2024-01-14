@@ -65,8 +65,16 @@ input[type="radio"]:checked+label {
 #div_lex_main,
 #div_lexch_main,
 #div_end,
-#div_end_end,
 #div_feed,
+.lg_en,
+.lg_de,
+.lg_nl,
+.lg_ch,
+.lg_ch2 {
+    display: none;
+}
+
+#div_end_,
 .lg_en,
 .lg_de,
 .lg_nl,
