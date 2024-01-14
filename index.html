@@ -16,9 +16,8 @@
 <body class="notranslate">
 
     <div id="div_start">
-        <br />
+        <br /><br />
         <div style="display: inline-block; text-align: left;">
-
             <div style="text-align: center;font-variant: small-caps;">Welcome to LexTALE Test (English).</div>
             <span style="color:grey">-----------------------------------------------------------------------</span>
             <br /><br />
@@ -37,10 +36,7 @@
     </div>
 
     <div id="div_lex_intro">
-        <br />
-
         <div class="texts">
-
             <div class="lg_en">
                 This test consists of about 60 trials, in each of which you will see a string of letters. Your task is
                 to decide whether this is an existing English word or not. If you think it is an existing English word,
@@ -67,11 +63,10 @@
                 If everything is clear, you can now start the experiment.
                 <br /><br />
             </div>
+            
             <div class="lg_ch" id="ch_firstscreen">
-
                 <img id="intro_ch" src=''
                     alt="(Warning: Missing image! Displaying HTML characters instead.) 在下一页，您将会看到90个看上去像“汉字”的字，当中只有一些是真正存在的汉字。您需要对每一个字做出判断，如果您认为该字是在中文里存在的(即使您不能够明确地说出该字的意思)或者是您知道该字的话，请勾选左上方的“是汉字”选项 。您无需快速回答每一道问题，但请您根据您的一反应来作答，不用过度的犹豫。请在没有任何外来帮忙的情况下独立完成此测试（不要使用任何汉语词典！）。所有的字皆为简体中文。下方的图片为作答例子。">
-
                 <div class="lg_ch2">
                     On the next page, you are going to be shown 90 characters that look “Chinese”. Only some of them are
                     real Chinese characters. You have to decide for each item whether it is a real Chinese character or
@@ -85,9 +80,7 @@
                     outside aids (i.e., do not consult a dictionary!). Each character will be presented in Simplified
                     Chinese. A sample of what the test looks like is shown below.
                 </div>
-
                 <br />
-
                 <div id="example_screen">
                     <br />
                     <img id="intro_ch_short1" src='' alt='如果您认为该字为汉字,请勾选左上方"是汉字"的选项。(error note: missing image!)'>
@@ -97,13 +90,9 @@
                         item is a real Chinese character.
                     </div>
                     <br />
-
-                    <ul id='ch_list_examples' class="lists checkbox">
-                    </ul>
-
+                    <ul id='ch_list_examples' class="lists checkbox"></ul>
                 </div>
                 <br />
-
                 <div style="text-align:center">
                     <img id="intro_ch_bottom" src='' alt='当你认为"家"和"桝"是汉字 (error note: missing image!)'>
                     <div class="lg_ch2">
@@ -114,7 +103,6 @@
                         are real Chinese characters.)
                     </div>
                 </div>
-
                 <div id="loading_id"><br /><br />Please wait... (loading images...)</div>
             </div>
         </div>
@@ -124,9 +112,7 @@
             <span class="lg_en lg_de lg_nl">OK</span>
             <span class="lg_ch"> >> </span>
         </button>
-
-        <br />
-        <br />
+        <br /><br />
     </div>
 
     <div id="div_lex_main">
@@ -176,13 +162,13 @@
      <div id="div_end">
         <br /><br />
         <div style="text-align: center;font-variant: small-caps;">The test is completed.</div>
-        <br /><br />
+            <br /><br />
         <button class="bttn" onclick="show_feed()">RESULT</button>
-        <br /><br />
+            <br /><br />
         <div style="text-align: center;font-variant: small-caps;">Please click to move on.</div>
-        <br /><br />
+            <br /><br />
         <button class="bttn" onclick="dl_as_file('lextale_results.txt', full_data);">MOVE&nbsp;ON</button>
-    </div>
+     </div>
     
      <div class="texts" id="div_feed">
         <div style="border: 1px solid black;padding:0 1em 0.5em 1em;">
