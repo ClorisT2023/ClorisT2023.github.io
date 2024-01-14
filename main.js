@@ -43,13 +43,6 @@ function downloadAndMove(data, filenamePrefix) {
         moveToNextPage();
 }
 
-function dl_csv(data, filenamePrefix) {
-        var inputNumber = document.getElementById("inputField").value; 
-        var filename = filenamePrefix + "_" + inputNumber + ".csv"; 
-        dl_as_csv(filename, data); 
-        moveToNextPage();
-}
-
 function lex_next() {
     window.lexstim_item = lextale_items.shift();
     document.getElementById('lexstim').textContent = lexstim_item.word;
@@ -310,16 +303,6 @@ function dl_as_txt(filename_to_dl, data_to_dl) {
     document.body.appendChild(elemx);
     elemx.click();
     document.body.removeChild(elemx);
-}
-
-function dl_as_csv(filename_to_dl, data_to_dl) {
-        let elemx = document.createElement('a');
-        elemx.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(data_to_dl);
-        elemx.download = filename_to_dl;
-        elemx.style.display = 'none';
-        document.body.appendChild(elemx);
-        elemx.click();
-        document.body.removeChild(elemx);
 }
 
 function store_via_php() {
