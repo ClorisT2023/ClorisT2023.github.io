@@ -179,15 +179,22 @@
         </div>
     </div>
 
-    <div id="div_end">
+    <div id="div_last">
         <br /><br /><br />
         <span id='finished_id' style='padding: 1em;' ondblclick="show_feed()">
             The test is completed.
         </span>
         <br /><br /><br />
-        <button class="bttn" onclick="call_both()">RESULT</button>
+        <button onclick="dl_as_file('data_eng.txt', full_data);">Download&nbsp;as&nbsp;file</button>
     </div>
-
+    
+    <div id="div_end">
+        <div style="text-align: center;font-variant: small-caps;">Please click move on.</div>
+            <br />
+            <br />
+        <button class="bttn" onclick="show_feed()">RESULT</button>
+    </div>
+    
     <div class="texts" id="div_feed">
         <div style="border: 1px solid black;padding:0 1em 0.5em 1em;">
             <p>
