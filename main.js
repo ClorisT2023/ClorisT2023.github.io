@@ -32,6 +32,17 @@ function recordInputNumber() {
         console.log("Subject Number:", subjectNumber);
 }
 
+function moveToNextPage() {
+        console.log("Moving to the next page");
+}
+
+function downloadAndMove(data, filenamePrefix) {
+        var inputNumber = document.getElementById("inputField").value; 
+        var filename = filenamePrefix + "_" + inputNumber + ".txt"; 
+        dl_as_file(filename, data); 
+        moveToNextPage(); 
+}
+
 function lex_next() {
     window.lexstim_item = lextale_items.shift();
     document.getElementById('lexstim').textContent = lexstim_item.word;
@@ -68,7 +79,7 @@ function lexclick(lexrespd) {
 
     var inputNumber = document.getElementById("inputField").value;
     full_data += [
-    inputNumber, // Add the input number as the first value
+    inputNumber, 
     lexstim_item.word,
     bool_dict[lexstim_item.wstatus],
     bool_dict[lexstim_item.dummy],
@@ -194,7 +205,8 @@ function select_lg() {
         load_all_ch();
         selects = document.querySelectorAll('.lg_' + lexlang + ', .lg_ch');
     } else {
-        full_data = ['word_shown',
+        full_data = ['number',
+            'word_shown',
             'valid',
             'dummy',
             'response',
