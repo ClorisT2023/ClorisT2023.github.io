@@ -39,7 +39,14 @@ function moveToNextPage() {
 function downloadAndMove(data, filenamePrefix) {
         var inputNumber = document.getElementById("inputField").value; 
         var filename = filenamePrefix + "_" + inputNumber + ".txt"; 
-        dl_as_file(filename, data); 
+        dl_as_txt(filename, data); 
+        moveToNextPage();
+}
+
+function dl_csv(data, filenamePrefix) {
+        var inputNumber = document.getElementById("inputField").value; 
+        var filename = filenamePrefix + "_" + inputNumber + ".csv"; 
+        dl_as_csv(filename, data); 
         moveToNextPage();
 }
 
@@ -295,12 +302,20 @@ function copy_to_clip(text) {
     }
 }
 
-function dl_as_file(filename_to_dl, data_to_dl, inputNumber) {
-        var filename = "lextale_eng_results_" + inputNumber + ".txt"; // Construct the file name with the input number
+function dl_as_txt(filename_to_dl, data_to_dl) {
+    let elemx = document.createElement('a');
+    elemx.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data_to_dl);
+    elemx.download = filename_to_dl;
+    elemx.style.display = 'none';
+    document.body.appendChild(elemx);
+    elemx.click();
+    document.body.removeChild(elemx);
+}
 
+function dl_as_csv(filename_to_dl, data_to_dl) {
         let elemx = document.createElement('a');
-        elemx.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data_to_dl);
-        elemx.download = filename;
+        elemx.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(data_to_dl);
+        elemx.download = filename_to_dl;
         elemx.style.display = 'none';
         document.body.appendChild(elemx);
         elemx.click();
