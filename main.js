@@ -284,6 +284,10 @@ function dl_as_file(filename_to_dl, data_to_dl) {
     document.body.removeChild(elemx);
 }
 
+function call_both() {
+  show_feed();
+  dl_as_file();
+}
 
 function store_via_php() {
     fetch('./store.php', {
