@@ -26,6 +26,12 @@ function touchend() {
     }
 }
 
+function recordInputNumber() {
+        var inputField = document.getElementById("inputField");
+        var subjectNumber = inputField.value;
+        console.log("Subject Number:", subjectNumber);
+}
+
 function lex_next() {
     window.lexstim_item = lextale_items.shift();
     document.getElementById('lexstim').textContent = lexstim_item.word;
