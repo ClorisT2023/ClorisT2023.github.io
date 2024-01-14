@@ -143,7 +143,6 @@ function show_feed() {
     document.getElementById('div_end').style.display = 'none';
     document.getElementById('div_feed').style.display = 'block';
     document.getElementById('full_data_disp').innerHTML = full_data;
-    var filename = "data.xlsx";
 }
 
 function images_loaded() {
