@@ -32,15 +32,10 @@ function recordInputNumber() {
         console.log("Subject Number:", subjectNumber);
 }
 
-function moveToNextPage() {
-        console.log("Moving to the next page");
-}
-
 function downloadAndMove(data, filenamePrefix) {
         var inputNumber = document.getElementById("inputField").value; 
         var filename = filenamePrefix + "_" + inputNumber + ".txt"; 
         dl_as_file(filename, data); 
-        moveToNextPage(); 
 }
 
 function lex_next() {
@@ -161,6 +156,7 @@ function ch_ending() {
 
 function show_feed() {
     document.getElementById('div_end').style.display = 'none';
+    document.getElementById('div_end_').style.display = 'none';
     document.getElementById('div_feed').style.display = 'block';
     document.getElementById('full_data_disp').innerHTML = full_data;
 }
