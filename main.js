@@ -32,10 +32,15 @@ function recordInputNumber() {
         console.log("Subject Number:", subjectNumber);
 }
 
+function moveToNextPage() {
+        console.log("Moving to the next page");
+}
+
 function downloadAndMove(data, filenamePrefix) {
         var inputNumber = document.getElementById("inputField").value; 
         var filename = filenamePrefix + "_" + inputNumber + ".txt"; 
         dl_as_file(filename, data); 
+        moveToNextPage();
 }
 
 function lex_next() {
