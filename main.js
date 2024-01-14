@@ -295,14 +295,16 @@ function copy_to_clip(text) {
     }
 }
 
-function dl_as_file(filename_to_dl, data_to_dl) {
-    let elemx = document.createElement('a');
-    elemx.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data_to_dl);
-    elemx.download = filename_to_dl;
-    elemx.style.display = 'none';
-    document.body.appendChild(elemx);
-    elemx.click();
-    document.body.removeChild(elemx);
+function dl_as_file(filename_to_dl, data_to_dl, inputNumber) {
+        var filename = "lextale_eng_results_" + inputNumber + ".txt"; // Construct the file name with the input number
+
+        let elemx = document.createElement('a');
+        elemx.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data_to_dl);
+        elemx.download = filename;
+        elemx.style.display = 'none';
+        document.body.appendChild(elemx);
+        elemx.click();
+        document.body.removeChild(elemx);
 }
 
 function store_via_php() {
